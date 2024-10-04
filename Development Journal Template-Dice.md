@@ -1,10 +1,10 @@
-# [TASK NAME]
+# RPG - Dice
 
 [Module Name]
 
-[Student Name]
+Callum Wade
 
-[Student ID]
+2404781
 
 ## Research
 
@@ -52,23 +52,51 @@ I found their implementation and choice great for the context of their narrative
 
 ### What was the process of completing the task? What influenced your decision making?
 
-- What was the process of completing the task at hand? Did you do any initial planning?
-- Did you receive any feedback from users, peers or lecturers? How did you react to it?
+- To complete the task i started with making the six sided dice by making a public void for the first dice. Within the void i used a Random.Range(1,7) so that it generated a number like if you rolled a six sided dice. I assigned the result from the the Random.Range with an int variable called d6Result. The next line was a Debug.Log that sent the number generated to the log.
 
 <br>
 
 ```csharp
-using UnityEngine;
-public class HelloWorld : MonoBehaviour 
-{
-    public void Start() 
+    public void RollD6()
     {
-        Debug.Log("Hello World!");
+        int d6Result = Random.Range(1, 7);
+        Debug.Log("D6 rolled a " + d6Result);
     }
+```
+*Figure 1. An example of the script used for rolling the six sided dice*
+
+-Then i just copied the code for the other two dices but changed the variables and values to match the dice that they will be used for.
+
+<br>
+
+```csharp
+public void RollD12()
+{
+    int d12Result = Random.Range(1, 13);
+    Debug.Log("D12 rolled a " + d12Result);
+}
+
+public void RollD20()
+{
+    int d20Result = Random.Range(1, 21);
+    Debug.Log("D20 rolled a " + d20Result);
 }
 ```
-*Figure 1. An example of using a script as a figure. This script has a `Start()` method!*
+*Figure 2. An example of the script used for the D12 and D20*
 
+- Then i just used a void Start to call all the voids to roll all the dices at once
+
+<br>
+
+```csharp
+void Start()
+{
+    RollD6();
+    RollD12();
+    RollD20();
+}
+```
+* *
 ### What creative or technical approaches did you use or try, and how did this contribute to the outcome?
 
 - Did you try any new software or approaches? How did the effect development?
