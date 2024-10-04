@@ -90,7 +90,7 @@ void Start()
 
 <br>
 
-<img src="Buttons example.png" width="100" height="100">
+<img src="Buttons example.png" width="200" height="200">
 <br>
 *Figure 4. An example of the buttons i created to manually roll each dice.*
 
