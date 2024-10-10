@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     Dice diceScript;
 
-    public float playerHealth = 20f;
+    public double playerHealth = 20f;
     public float playerLevel = 1f;
     public float playerXP = 0f;
     public int luck = 20;
@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
         {
             if (diceScript.damageCalculated == true)
             {
-                playerHealth = playerHealth - diceScript.damage;
+                playerHealth = playerHealth - diceScript.enemyDamage;
                 diceScript.damageCalculated = false;
                 diceScript.lastRoller = null;
             }

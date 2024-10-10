@@ -7,8 +7,12 @@ public class Enemy : MonoBehaviour
 {
     Dice diceScript;
 
-    public float enemyHealth = 5;
-    private int enemyDifficulty = 1;
+    public int enemyDiceSides;
+    public double enemyHealth = 5;
+    private int enemyDifficulty = 0;
+    public int enemyMaxDamage = 15;
+    public bool enemyRolled = false;
+    public int enemyRollResult;
 
 
     // Start is called before the first frame update
@@ -19,6 +23,9 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        EnemyDiceRoll();
+
+        //After the player has rolled and the damage has been calculated, damage the enemy
         if (diceScript.lastRoller == "Player")
         {
             if (diceScript.damageCalculated == true)
@@ -28,18 +35,23 @@ public class Enemy : MonoBehaviour
                 diceScript.damageCalculated = false;
                 diceScript.lastRoller = null;
                 Debug.Log("HI");
+                diceScript.playerRolled = true;
             }
-            
         }
     }
 
 
     public void EnemyDiceRoll()
     {
-        //the enemy difficulty determines the amount of sides the dice has
-        int diceSides = 20 - enemyDifficulty;
-        int enemyRollResult = Random.Range(1, diceSides);
-        Debug.Log("Enemy rolled a " + diceSides + "sided dice and rolled a " + enemyRollResult);
-        diceScript.lastRoller = "Enemy";
+        if (diceScript.playerRolled == true)
+        {
+            //the enemy difficulty determines the amount of sides the dice has
+            enemyDiceSides = 20 - enemyDifficulty;
+            enemyRollResult = Random.Range(1, enemyDiceSides);
+            Debug.Log("Enemy rolled a " + enemyDiceSides + "sided dice and rolled a " + enemyRollResult);
+            diceScript.lastRoller = "Enemy";
+            enemyRolled = true;
+            //diceScript.playerRolled = false;
+        }
     }
 }
