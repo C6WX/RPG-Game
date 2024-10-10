@@ -10,6 +10,8 @@ public class Dice : MonoBehaviour
     public bool diceRolled = false;
     public float maxDamage = 20f;
     public float damage;
+    public string lastRoller = null;
+    public bool damageCalculated = false;
 
     TMP_Text diceText;
 
@@ -32,6 +34,7 @@ public class Dice : MonoBehaviour
             //works out the damage based on the dice result and the amount of sides the dice has and the max damage to make the damage equal no matter the dice rolled
             double damage = ((double)diceResult / diceSides) * maxDamage;
             Debug.Log("Damage = " + damage);
+            damageCalculated = true;
             diceRolled = false;
         }
     }
@@ -43,6 +46,7 @@ public class Dice : MonoBehaviour
         diceResult = d6Result;
         Debug.Log("D6 rolled a " + d6Result);
         diceRolled = true;
+        lastRoller = "Player";
     }
 
     public void RollD12()
@@ -52,6 +56,7 @@ public class Dice : MonoBehaviour
         diceResult = d12Result;
         Debug.Log("D12 rolled a " + d12Result);
         diceRolled = true;
+        lastRoller = "Player";
     }
 
     public void RollD20()
@@ -61,5 +66,6 @@ public class Dice : MonoBehaviour
         diceResult = d20Result;
         Debug.Log("D20 rolled a " + d20Result);
         diceRolled = true;
+        lastRoller = "Player";
     }
 }

@@ -4,22 +4,32 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float playerHealth = 10f;
+    Dice diceScript;
+
+    public float playerHealth = 20f;
     public float playerLevel = 1f;
     public float playerXP = 0f;
     public int luck = 20;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        diceScript = GameObject.FindObjectOfType<Dice>();
     }
 
     // Update is called once per frame
-    //void Update()
-    //{
-    //    if (diceRolled == true)
-    //    {
-    //        Debug.Log("hi");
-    //    }
-    //}
+    void Update()
+    {
+        if (diceScript.lastRoller == "Enemy")
+        {
+            if (diceScript.damageCalculated == true)
+            {
+                playerHealth = playerHealth - diceScript.damage;
+                diceScript.damageCalculated = false;
+                diceScript.lastRoller = null;
+            }
+           
+        }
+    }
 }
