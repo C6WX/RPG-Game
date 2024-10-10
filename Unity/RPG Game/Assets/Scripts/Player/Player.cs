@@ -15,8 +15,11 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //void Update()
+    //{
+    //    if (diceRolled == true)
+    //    {
+    //        Debug.Log("hi");
+    //    }
+    //}
 }
