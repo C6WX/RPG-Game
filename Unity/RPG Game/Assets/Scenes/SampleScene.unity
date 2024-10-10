@@ -614,7 +614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd3d7b10e260acd45b9d8964f7ca536d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 10
+  playerHealth: 30
   playerLevel: 1
   playerXP: 0
   luck: 20
@@ -1157,9 +1157,11 @@ MonoBehaviour:
   diceSides: 0
   diceRolled: 0
   maxDamage: 20
-  damage: 0
   lastRoller: 
   damageCalculated: 0
+  playerRolled: 0
+  damage: 0
+  enemyDamage: 0
 --- !u!114 &781040148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1542,7 +1544,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5adef9f7402f9dd4d95bedf539453401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyDiceSides: 0
   enemyHealth: 15
+  enemyMaxDamage: 15
+  enemyRolled: 0
+  enemyRollResult: 0
 --- !u!1 &1380176914
 GameObject:
   m_ObjectHideFlags: 0
