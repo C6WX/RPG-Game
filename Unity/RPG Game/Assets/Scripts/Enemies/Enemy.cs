@@ -24,20 +24,8 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         EnemyDiceRoll();
-
-        //After the player has rolled and the damage has been calculated, damage the enemy
-        if (diceScript.lastRoller == "Player")
-        {
-            if (diceScript.damageCalculated == true)
-            {
-                enemyHealth = enemyHealth - diceScript.damage;
-                Debug.Log(enemyHealth);
-                diceScript.damageCalculated = false;
-                diceScript.lastRoller = null;
-                Debug.Log("HI");
-                diceScript.playerRolled = true;
-            }
-        }
+        EnemyHealthCalculation();
+        EnemyDeath();
     }
 
 
@@ -52,6 +40,31 @@ public class Enemy : MonoBehaviour
             diceScript.lastRoller = "Enemy";
             enemyRolled = true;
             //diceScript.playerRolled = false;
+        }
+    }
+
+    public void EnemyHealthCalculation() 
+    {
+        //After the player has rolled and the damage has been calculated, damage the enemy
+        if (diceScript.lastRoller == "Player")
+        {
+            if (diceScript.damageCalculated == true)
+            {
+                enemyHealth = enemyHealth - diceScript.damage;
+                Debug.Log("Enemy Health = " + enemyHealth);
+                diceScript.damageCalculated = false;
+                diceScript.lastRoller = null;
+                diceScript.playerRolled = true;
+            }
+        }
+    }
+
+    public void EnemyDeath()
+    {
+        if (enemyHealth <= 0)
+        {
+            enemyHealth = 0;
+            Destroy(gameObject);
         }
     }
 }

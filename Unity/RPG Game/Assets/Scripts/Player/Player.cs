@@ -21,15 +21,31 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        HealthCalculation(); 
+        PlayerDeath();     
+    }
+    public void HealthCalculation()
+    {
+        //After the enemy has rolled, the player's health is reduced based on the enemie's damage
         if (diceScript.lastRoller == "Enemy")
         {
             if (diceScript.damageCalculated == true)
             {
                 playerHealth = playerHealth - diceScript.enemyDamage;
+                Debug.Log("Player Health = " + playerHealth);
                 diceScript.damageCalculated = false;
                 diceScript.lastRoller = null;
             }
-           
+
+        }
+    }
+
+    public void PlayerDeath()
+    {
+        if (playerHealth <= 0)
+        {
+            playerHealth = 0;
+            Destroy(gameObject);
         }
     }
 }
