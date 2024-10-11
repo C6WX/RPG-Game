@@ -6,6 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     Dice diceScript;
+    LevelManager levelScript;
 
     public int enemyDiceSides;
     public double enemyHealth = 5;
@@ -19,6 +20,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         diceScript = GameObject.FindObjectOfType<Dice>();
+        levelScript = GameObject.FindObjectOfType<LevelManager>();
     }
 
     void Update()
@@ -64,6 +66,7 @@ public class Enemy : MonoBehaviour
         if (enemyHealth <= 0)
         {
             enemyHealth = 0;
+            levelScript.enemiesBeaten++;
             Destroy(gameObject);
         }
     }
