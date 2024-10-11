@@ -22,14 +22,10 @@ Callum Wade
 
 I needed to access variables from a different script so that they could be changed within the script I was currently working on. I had previously accessed variables from other scripts in past projects I had done but I needed a refresher on it. This led me to read a gamedevbeginner website on accessing variables from other scripts. (French, 2020)
 
+Within the website, I found that the section of using a get component on a different object was able to help remind me of how it is done since that was the method I used to use in my other projects. I also found the section on static variables very interesting as I used to use static variables lots to allow variables to be accessed across scripts but after reading about them as it turns out that using static variables can cause problems later of when programming as only one of a variable can be a static variable. If you were to have multiple of a singe variable, you will need to change each reference of the static variable in each script till it works. 
 
-# Example Documentation
+I found the guide to be simple, which is good because it is easy to find what you need to find. However it is written in an unproffesional format which can make it hard for some people to follow.
 
-I wanted to create an emitter which takes advantage of spread and focus, which was a technique I learned from a previous assignment where the spatialisation of an object changes depending on distance. I also wanted to work specifically with a `Spline Component` to encapsulate the entire ship with an “Ocean Emitter”. This led me to read the Unreal Blueprints API References and Wwise 3D Positioning documentation (Unreal Engine Blueprint API Reference | Unreal Engine 5.4 Documentation | Epic Developer Community, s.d., AudioKinetic Inc, s.d.).
-
-I found a Blueprint node called “Find Location Closest to World Location" which returns a `Vector3` on the spline position closest to another `Vector3`, I believe this can help move the emitter towards the player(Finding time of given results from (Find Location Closest to World Location) from Splines - Programming & Scripting / Blueprint, 2023).
-
-I found the Unreal documentation clear and easy to navigate, however it was much harder to find specific nodes unless you are familiar with the naming conventions used by Unreal, such as “World Location” and the API documentation is separated from the property references. The Wwise documentation on the other hand is much easier to navigate as they have core topics such as “Using Sounds and Motion to Enhance Gameplay” and examples of how they can be applied, which the unreal documentation lacked. 
 
 # Game Source
 
