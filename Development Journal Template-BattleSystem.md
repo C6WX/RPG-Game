@@ -1,10 +1,10 @@
-# [TASK NAME]
+# Battle System 
 
-[Module Name]
+Fundementals of Game Development
 
-[Student Name]
+Callum Wade 
 
-[Student ID]
+2404781
 
 ## Research
 
@@ -52,22 +52,81 @@ I found their implementation and choice great for the context of their narrative
 
 ### What was the process of completing the task? What influenced your decision making?
 
-- What was the process of completing the task at hand? Did you do any initial planning?
-- Did you receive any feedback from users, peers or lecturers? How did you react to it?
-
+-For the first step, amending the dice class, I made the dice return an int value.
 <br>
 
 ```csharp
-using UnityEngine;
-public class HelloWorld : MonoBehaviour 
+public void RollD6()
 {
-    public void Start() 
+    diceSides = 6;
+    //when the player hasn't rolled, the player can click to roll 
+    if (playerRolled == false) 
     {
-        Debug.Log("Hello World!");
-    }
+        int d6Result = Random.Range(1, 7);
+        diceResult = d6Result;
+        Debug.Log("D6 rolled a " + d6Result);
+        diceRolled = true;
+        lastRoller = "Player";            
+    }        
 }
 ```
-*Figure 1. An example of using a script as a figure. This script has a `Start()` method!*
+*Figure 1. An of how I scripted the dice roll and making it return an in value*
+
+-To create the pawn class, which in my game is the basic enemy, i assigned the enemy health, max damage and difficulty stats
+<br>
+
+```csharp
+
+ public int enemyDiceSides;
+ public double enemyHealth = 5;
+ private int enemyDifficulty = 0;
+ public int enemyMaxDamage = 15;
+ public bool enemyRolled = false;
+ public int enemyRollResult;
+
+```
+*Figure 2. The script I used to assign the enemies' stats.*
+
+-To add a battle system and work out health after attacking, I made an equation that worked out damage based on the dice roll, then I made it so that after the player rolled the dice, the result of the roll would go through the equation, then the result would be subtracted off the enemies health. I also made this work for the enemy so that when the enemy rolls, the same thing happens but the damage is subtracted from the player's health.
+<br>
+
+```csharp
+
+public void PlayerDamageCalculation()
+{
+    if (diceRolled == true)
+    {
+        //works out the damage based on the dice result and the amount of sides the dice has and the max damage to make the damage equal no matter the dice rolled
+        damage = ((double)diceResult / diceSides) * maxDamage;
+        Debug.Log("Damage = " + damage);
+        damageCalculated = true;
+        diceRolled = false;
+    }
+}
+
+```
+*Figure 3. The script that works out the damage based on the dice roll for the player*
+
+```csharp
+
+public void HealthCalculation()
+{
+    //After the enemy has rolled, the player's health is reduced based on the enemie's damage
+    if (diceScript.lastRoller == "Enemy")
+    {
+        if (diceScript.damageCalculated == true)
+        {
+            playerHealth = playerHealth - diceScript.enemyDamage;
+            Debug.Log("Player Health = " + playerHealth);
+            diceScript.damageCalculated = false;
+            diceScript.lastRoller = null;
+        }
+
+    }
+}
+
+```
+*Figure 4. The script that works out the enemies' health after calculating the damage that they will take*
 
 ### What creative or technical approaches did you use or try, and how did this contribute to the outcome?
 
@@ -82,21 +141,6 @@ public class HelloWorld : MonoBehaviour
 
 - Did you have any issues completing the task? How did you overcome them?
 
-## Outcome
-
-Here you can put links required for delivery of the task, ensure they are properly labelled appropriately and the links function. The required components can vary between tasks, you can find a definative list in the Assessment Information. Images and code snippets can be embedded and annotated if appropriate.
-
-- [Example Video Link](https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley)
-- [Example Repo Link](https://github.com/githubtraining/hellogitworld)
-- [Example Build Link](https://samperson.itch.io/desktop-goose)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=C4v0qHaYuEISAC01" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-*Figure 3. An example of an embedded video using a HTML code snippet.*
-
-<iframe frameborder="0" src="https://itch.io/embed/2374819" width="552" height="167"><a href="https://bitboyb.itch.io/nephilim-resurrection">Nephilim Resurrection (BETA) by bitboyb</a></iframe>
-
-*Figure 4. An example of a itch.io widget*
 
 ## Critical Reflection
 
