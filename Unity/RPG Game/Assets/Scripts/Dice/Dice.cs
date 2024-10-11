@@ -5,8 +5,7 @@ using TMPro;
 
 public class Dice : MonoBehaviour
 {
-    public float diceResult;
-    public float diceSides;
+    public float diceResult, diceSides;
     public bool diceRolled = false;
     public float maxDamage = 20f;
     //public float damage;
@@ -16,28 +15,19 @@ public class Dice : MonoBehaviour
     public double damage;
     public double enemyDamage;
 
-    TMP_Text diceText;
-
-    Enemy enemyScript;
+    private TMP_Text diceText;
+    private Enemy enemyScript;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         diceText = GetComponent<TMP_Text>();
-
         enemyScript = GameObject.FindObjectOfType<Enemy>();
-
-        //RollD6();
-        //RollD12();
-        //RollD20();
     }
 
-  
-
-    void Update()
+    private void Update()
     {
         diceText.text = ("Dice result: " + diceResult.ToString());
-
         PlayerDamageCalculation();
         EnemyDamageCalculation();
     }
