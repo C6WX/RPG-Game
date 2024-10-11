@@ -16,10 +16,6 @@ Callum Wade
 
 #### Sources
 ```markdown
-- An opening paragraph about the source stating the author, developer or organisation, this paragraph should explain the source's influence, credentials, critical reception, awards, reputation or any issues with the source. For example, if the source is not reputable. If the source is a game, the issues that occurred during development or if had a poor launch.
-- List the aspects analysed in reference to the current task.
-- An ending paragraph stating what you enjoyed or disliked, what you agreed with or not agree with.
-
 Making a dice roll within C# uses Random.Range which i have learnt during previous work i have done inside of unity. However i still learnt more on Random.Range to see how far it can go when programming. This lead me to read the unity documentation on Random.Range. (Technologies, s.d.)
 
 Within the website I found it interesting how Random.Range can be used for things such as getting random numbers to determine an objects position within a Vector3.
