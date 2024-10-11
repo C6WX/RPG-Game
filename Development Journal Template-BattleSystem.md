@@ -10,17 +10,7 @@ Callum Wade
 
 ### What sources or references have you identified as relevant to this task?
 
-- What type of sources did you identity and want to explore? How would you justify it in reference to the brief set? Think about the focus of the brief.
-- What type of sources do you want to avoid? How could these kinds of sources be detrimental to the user experience, immersion or implementation?
-
-
-```Markdown
-# Example
-
-As I have done research regarding the audio identity and developing audio assets for this project in previous formative assignments. I wanted to look into specific Unreal and Wwise systems that will help create a more immersive experience. I wanted to focus on official documentation to improve my ability to learn new techniques without explicit instructions.
-
-I also wanted a creative source to help develop the parachute audio assets and learn how it should function within the game’s narrative.
-```
+- Since I was making a battle system, I researched into accessing variables from other scripts and using double variables. When working on the stats of each characted, I constantly needed to access varaibles from other scripts that would need changing. As for the double variables, I used them in my damage calculation. 
 
 #### Sources
 
@@ -29,6 +19,10 @@ I also wanted a creative source to help develop the parachute audio assets and l
 - An ending paragraph stating what you enjoyed or disliked, what you agreed with or not agree with.
 
 ```Markdown
+
+I needed to access variables from a different script so that they could be changed within the script I was currently working on. I had previously accessed variables from other scripts in past projects I had done but I needed a refresher on it. This led me to read a gamedevbeginner website on accessing variables from other scripts. (French, 2020)
+
+
 # Example Documentation
 
 I wanted to create an emitter which takes advantage of spread and focus, which was a technique I learned from a previous assignment where the spatialisation of an object changes depending on distance. I also wanted to work specifically with a `Spline Component` to encapsulate the entire ship with an “Ocean Emitter”. This led me to read the Unreal Blueprints API References and Wwise 3D Positioning documentation (Unreal Engine Blueprint API Reference | Unreal Engine 5.4 Documentation | Epic Developer Community, s.d., AudioKinetic Inc, s.d.).
@@ -37,13 +31,13 @@ I found a Blueprint node called “Find Location Closest to World Location" whic
 
 I found the Unreal documentation clear and easy to navigate, however it was much harder to find specific nodes unless you are familiar with the naming conventions used by Unreal, such as “World Location” and the API documentation is separated from the property references. The Wwise documentation on the other hand is much easier to navigate as they have core topics such as “Using Sounds and Motion to Enhance Gameplay” and examples of how they can be applied, which the unreal documentation lacked. 
 
-# Example Game Source
+# Game Source
 
-Just Cause 3 is an action-adventure game developed by Avalanche Studios, it features a mechanic where the player can navigate the open world with the use of a parachute and a wingsuit(Just Cause 3, 2015).
+An example of a game that uses a battle system is Baldur's Gate 3, a RPG game developed by Larian Studios(Baldur's Gate 3 2023).
 
-The wind becomes more prominent in the mix and its volume and speed is based on the player's velocity when using the wingsuit or parachute. It is not too overwhelming during action sequences to ensure audio responses can be clearly heard.
+Baldur's Gate 3 uses a battle system that is completely based off a roll of the dice. Within the game, a roll of a dice decided many things that happen incuding the damage that the player deals, the chance of the player's attack hitting and if the player gets a critical hit.
 
-I found their implementation and choice great for the context of their narrative and game mechanics. However, for the sequences featured in the assignment, it is more “cinematic” allowing for a different approach for the mix and can be “exaggerated” to drive its narrative function.
+I find the use of a dice to determine most things within the game to make the gameplay very interesting as it means that no playthrough will ever be the same unless somehow you roll the same number for every single dice roll, which is basically impossible.
 
 
 ```
@@ -52,7 +46,7 @@ I found their implementation and choice great for the context of their narrative
 
 ### What was the process of completing the task? What influenced your decision making?
 
--For the first step, amending the dice class, I made the dice return an int value.
+- For the first step, amending the dice class, I made the dice return an int value.
 <br>
 
 ```csharp
@@ -72,7 +66,7 @@ public void RollD6()
 ```
 *Figure 1. An of how I scripted the dice roll and making it return an in value*
 
--To create the pawn class, which in my game is the basic enemy, i assigned the enemy health, max damage and difficulty stats
+- To create the pawn class, which in my game is the basic enemy, i assigned the enemy health, max damage and difficulty stats
 <br>
 
 ```csharp
@@ -87,7 +81,7 @@ public void RollD6()
 ```
 *Figure 2. The script I used to assign the enemies' stats.*
 
--To add a battle system and work out health after attacking, I made an equation that worked out damage based on the dice roll, then I made it so that after the player rolled the dice, the result of the roll would go through the equation, then the result would be subtracted off the enemies health. I also made this work for the enemy so that when the enemy rolls, the same thing happens but the damage is subtracted from the player's health.
+- To add a battle system and work out health after attacking, I made an equation that worked out damage based on the dice roll, then I made it so that after the player rolled the dice, the result of the roll would go through the equation, then the result would be subtracted off the enemies health. I also made this work for the enemy so that when the enemy rolls, the same thing happens but the damage is subtracted from the player's health.
 <br>
 
 ```csharp
@@ -130,55 +124,26 @@ public void HealthCalculation()
 
 ### What creative or technical approaches did you use or try, and how did this contribute to the outcome?
 
-- Did you try any new software or approaches? How did the effect development?
-
-<br>
-
-![onhover image description](https://beforesandafters.com/wp-content/uploads/2021/05/Welcome-to-Unreal-Engine-5-Early-Access-11-16-screenshot.png)
-*Figure 2. An example of an image as a figure. This image shows where to package your Unreal project!.*
+- Instead of just having whatever the dice rolled be the damage, I used an equation that determined the damage based on the amount of sides on the dice, the result of the roll and the max damage that each roller can deal in one role. This adds some balance to the game and also allows for a max damage stat for both the player and the enemy that can both increase and decrease with a leveling system.
 
 ### Did you have any technical difficulties? If so, what were they and did you manage to overcome them?
 
-- Did you have any issues completing the task? How did you overcome them?
+- A technical difficulty I had when completing this task was from the amount of variables that needed to be accessed from other scripts. This caused quite a bit of confusion and slowing of progress as I had to spend a lot of time looking back on other scripts and changing variable names and types so that they will work in the other scripts too.
 
 
 ## Critical Reflection
 
 ### What did or did not work well and why?
 
-- What did not work well? What parts of the assignment that you felt did not fit the brief or ended up being lacklustre.
-- What did you think went very well? Were there any specific aspects you thought were very good?
+- What went well was that after all the messing about with accessing variables from other scripts and renaming variables, the script worked well and as intended.   
+- What didn't go well was that due to me using more complex solutions to problems while working, the scripts didn't turn out as tidy as they could have.
 
 ### What would you do differently next time?
 
-- Are there any new approaches, methodologies or different software that you wish to incorporate if you have another chance?
-- Is there another aspect you believe should have been the focus?
+- I would spend more time planning, if i was to do this again, so that my code would be simpler and tidier.
 
 ## Bibliography
 
-- Please use the [harvard referencing convention](https://mylibrary.uca.ac.uk/referencing).
+French, J. (2020) How to get a variable from another script in Unity (the right way). At: https://gamedevbeginner.com/how-to-get-a-variable-from-another-script-in-unity-the-right-way/ (Accessed  11/10/2024).
+<br>
 
-Video game development (2024) In: Wikipedia. At: https://en.wikipedia.org/w/index.php?title=Video_game_development&oldid=1240603537 (Accessed  03/09/2024).
-
-## Declared Assets
-
-- Please use the [harvard referencing convention](https://mylibrary.uca.ac.uk/referencing).
-
-Infinity Blade: Adversaries in Epic Content - UE Marketplace (s.d.) At: https://www.unrealengine.com/marketplace/en-US/product/infinity-blade-enemies (Accessed  09/09/2024).
-
----
-
-```Markdown
-# General Tips
-
-- Use plenty of images and videos to demonstrate your point. You can embed YouTube tutorials, your own recordings, etc.
-- Always reference! Even documentation, tutorials and anything you used for your assignment. Use an inline reference for the sentence and a bibliography reference at the end.
-- Word count is not important, you can also chose to use bullet points. As long as it is clear and readable, the format your decide to use can be flexible.
-- You are free to use AI but please ensure you have made a note in the declared assets, for example if you have a script called Test.cs , you should note that AI was used to in the creation of this script. You can use a bullet point list for each asset used like:
-
-The following assets were created or modified with the use of GPT 4o:
-- Test.cs
-- AnotherScript.cs
-- Development Journal.html
-
-```
