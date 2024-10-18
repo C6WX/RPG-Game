@@ -10,8 +10,7 @@ Callum Wade
 
 ### What sources or references have you identified as relevant to this task?
 
-- What type of sources did you identity and want to explore? How would you justify it in reference to the brief set? Think about the focus of the brief.
-- What type of sources do you want to avoid? How could these kinds of sources be detrimental to the user experience, immersion or implementation?
+- Since I was adding new int and float variables to the game, I researched different operators that i could use in if statements and equations.
 
 
 ```Markdown
@@ -37,15 +36,12 @@ I found a Blueprint node called “Find Location Closest to World Location" whic
 
 I found the Unreal documentation clear and easy to navigate, however it was much harder to find specific nodes unless you are familiar with the naming conventions used by Unreal, such as “World Location” and the API documentation is separated from the property references. The Wwise documentation on the other hand is much easier to navigate as they have core topics such as “Using Sounds and Motion to Enhance Gameplay” and examples of how they can be applied, which the unreal documentation lacked. 
 
-# Example Game Source
+# Game Source
+Team Fortress 2 is a first person shooter game developed by Valve Corporation. The game uses critical hits to give the players a chance to deal high damage to the enemy they are fighting(Team Fortress 2, 2007)
 
-Just Cause 3 is an action-adventure game developed by Avalanche Studios, it features a mechanic where the player can navigate the open world with the use of a parachute and a wingsuit(Just Cause 3, 2015).
+When shooting at another player within the game, each bullet that hits the enemy has a 2% chance to deal three times the weapon's base damage. The chance of dealing a critical hit is also modified by a bonus percentage based on the damage that the player has dealt within the last 20 seconds which scales from 0% at 0 damage to 10% at 800 damage.
 
-The wind becomes more prominent in the mix and its volume and speed is based on the player's velocity when using the wingsuit or parachute. It is not too overwhelming during action sequences to ensure audio responses can be clearly heard.
-
-I found their implementation and choice great for the context of their narrative and game mechanics. However, for the sequences featured in the assignment, it is more “cinematic” allowing for a different approach for the mix and can be “exaggerated” to drive its narrative function.
-
-
+I found this implementation of critical hit damage to be very interesting because the player is able to affect the chance of the critcal chance by dealing damage instead of having a stat that they change by getting new equipment like RPG games do.
 ```
 
 ## Implementation
@@ -209,5 +205,6 @@ Here you can put links required for delivery of the task, ensure they are proper
 
 ## Bibliography
 
+‘Critical Hits - Official TF2 Wiki | Official Team Fortress Wiki’. Accessed 18 October 2024. https://wiki.teamfortress.com/wiki/Critical_hits.
 
 
