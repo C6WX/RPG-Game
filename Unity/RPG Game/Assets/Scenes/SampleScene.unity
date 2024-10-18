@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 20946427}
   m_Layer: 5
   m_Name: Enemy Rolled
-  m_TagString: Untagged
+  m_TagString: EnemyRoll
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 692, y: 376.87}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 756.81, y: 375.38477}
+  m_SizeDelta: {x: 291.73, y: 47.8749}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &20946427
 MonoBehaviour:
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -78.04346, w: 0}
+  m_margin: {x: 0, y: 0, z: 2.7080002, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -895,6 +895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd3d7b10e260acd45b9d8964f7ca536d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dodgeUI: {fileID: 0}
   playerHealth: 30
   playerLevel: 1
   playerXP: 0
@@ -985,7 +986,7 @@ GameObject:
   - component: {fileID: 439277002}
   m_Layer: 5
   m_Name: Enemy Health
-  m_TagString: Untagged
+  m_TagString: EnemyHealth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1132,7 +1133,7 @@ GameObject:
   - component: {fileID: 492582193}
   m_Layer: 5
   m_Name: Player Health
-  m_TagString: Untagged
+  m_TagString: PlayerHealth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1535,7 +1536,7 @@ GameObject:
   - component: {fileID: 781040150}
   m_Layer: 5
   m_Name: Dice Roll Result
-  m_TagString: Untagged
+  m_TagString: DiceResult
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1556,8 +1557,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 693.39996, y: 462.13}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 756.81, y: 461.32}
+  m_SizeDelta: {x: 290.73, y: 48.84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &781040148
 MonoBehaviour:
@@ -1642,7 +1643,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -75.41614, w: 0}
+  m_margin: {x: 0, y: 0, z: 3.2104034, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2817,7 +2818,7 @@ GameObject:
   - component: {fileID: 2069007108}
   - component: {fileID: 2069007107}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Dodge Success
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2832,15 +2833,15 @@ RectTransform:
   m_GameObject: {fileID: 2069007105}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3624, y: 1.3624, z: 1.3624}
+  m_LocalScale: {x: 1.3978, y: 1.3978, z: 1.3978}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1380176918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 683, y: 296}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 756.81, y: 287.3}
+  m_SizeDelta: {x: 289.3904, y: 51.516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2069007107
 MonoBehaviour:
@@ -2925,7 +2926,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -95.141846, w: 0}
+  m_margin: {x: 0, y: 0, z: -3.571106, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

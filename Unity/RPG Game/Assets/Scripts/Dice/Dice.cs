@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class Dice : MonoBehaviour
 {
@@ -16,27 +15,27 @@ public class Dice : MonoBehaviour
     [HideInInspector] private bool playerRolledCrit = false;
     [HideInInspector] public int criticalHit = -1;
 
-    private TMP_Text diceText;
     private Enemy enemyScript;
     private Player playerScript;
+    private GameObject criticalUI;
 
     // Start is called before the first frame update
     private void Start()
     {
-        diceText = GetComponent<TMP_Text>();
         enemyScript = GameObject.FindObjectOfType<Enemy>();
         playerScript = GameObject.FindObjectOfType<Player>();
+        criticalUI = GameObject.Find("Roll for critical hit");
+        criticalUI.SetActive(false);
     }
 
     private void Update()
     {
-        diceText.text = ("Dice result: " + diceResult.ToString());
         PlayerDamageCalculation();
         EnemyDamageCalculation();
     }
 
     public void PlayerDamageCalculation()
-    {
+    {      
         if (diceRolled == true && playerRolledCrit == true)
         {
             if (criticalHit <= playerScript.critcalHitChance)
@@ -50,6 +49,7 @@ public class Dice : MonoBehaviour
                 damageCalculated = true;
                 diceRolled = false;
                 playerRolledCrit = false;
+                criticalUI.SetActive(false);
             }
             else
             {
@@ -59,8 +59,8 @@ public class Dice : MonoBehaviour
                 damageCalculated = true;
                 diceRolled = false;
                 playerRolledCrit = false;
-            }
-            
+                criticalUI.SetActive(false);
+            }            
         }
     }
     public void RollForCriticalHit()
@@ -69,12 +69,13 @@ public class Dice : MonoBehaviour
         Debug.Log("Critical Hit Rolled " + criticalHit);
         playerRolledCrit = true;
     }
+
     public void EnemyDamageCalculation()
     {
         if (enemyScript.enemyRolled == true)
         {
-            //works out the damage based on the dice result and the amount of sides the dice has and the max damage to make the damage equal no matter the dice rolled
-            enemyDamage = (enemyScript.enemyRollResult / enemyScript.enemyDiceSides) * enemyScript.enemyMaxDamage;
+            //works out the damage based on the dice result and the amount of sides the dice has and the max damage to make the damage equal no matter the dice rolled          
+            enemyDamage = ((float)enemyScript.enemyRollResult / (float)enemyScript.enemyDiceSides) * (float)enemyScript.enemyMaxDamage;
             Debug.Log("Enemy Damage = " + enemyDamage);
             damageCalculated = true;
             playerRolled = false;
@@ -94,6 +95,7 @@ public class Dice : MonoBehaviour
             diceRolled = true;
             lastRoller = "Player";
             playerScript.playerRolledDodge = false;
+            criticalUI.SetActive(true);
         }        
     }
 
@@ -109,6 +111,7 @@ public class Dice : MonoBehaviour
             diceRolled = true;
             lastRoller = "Player";
             playerScript.playerRolledDodge = false;
+            criticalUI.SetActive(true);
         }        
     }
 
@@ -124,6 +127,7 @@ public class Dice : MonoBehaviour
             diceRolled = true;
             lastRoller = "Player";
             playerScript.playerRolledDodge = false;
+            criticalUI.SetActive(true);
         }
     }
 }

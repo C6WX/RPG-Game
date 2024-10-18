@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     LevelManager levelScript;
 
     public int enemyDiceSides;
-    public double enemyHealth = 5;
+    public float enemyHealth = 30f;
     private int enemyDifficulty = 0;
     public int enemyMaxDamage = 15;
     public bool enemyRolled = false;
@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
             //the enemy difficulty determines the amount of sides the dice has
             enemyDiceSides = 20 - enemyDifficulty;
             enemyRollResult = Random.Range(1, enemyDiceSides);
-            Debug.Log("Enemy rolled a " + enemyDiceSides + "sided dice and rolled a " + enemyRollResult);
+            Debug.Log("Enemy rolled a " + enemyDiceSides + " sided dice and rolled a " + enemyRollResult);
             diceScript.lastRoller = "Enemy";
             enemyRolled = true;
             //diceScript.playerRolled = false;

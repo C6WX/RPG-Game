@@ -5,8 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Dice diceScript;
+    public GameObject dodgeUI;      
 
-    public double playerHealth = 20f;
+    public float playerHealth = 20f;
     public float playerLevel = 1f;
     public float playerXP = 0f;
     public int critcalHitChance = 20;
@@ -18,18 +19,27 @@ public class Player : MonoBehaviour
 
 
     // Start is called before the first frame update
-    private void Start() => diceScript = GameObject.FindObjectOfType<Dice>();
+    private void Start()
+    {
+        diceScript = GameObject.FindObjectOfType<Dice>();
+        dodgeUI = GameObject.Find("Roll for dodge");     
+        dodgeUI.SetActive(false);       
+    }
+       
+       
 
     // Update is called once per frame
     private void Update()
     {
         HealthCalculation();     
     }
+
     public void HealthCalculation()
     {
         //After the enemy has rolled, the player's health is reduced based on the enemie's damage
         if (diceScript.lastRoller == "Enemy" && diceScript.damageCalculated == true)
         {
+            dodgeUI.SetActive(true);
             if (dodge != -1)
             {
                 if (dodge <= dodgeChance)
@@ -38,6 +48,7 @@ public class Player : MonoBehaviour
                     diceScript.damageCalculated = false;
                     diceScript.lastRoller = null;
                     dodge = -1;
+                    dodgeUI.SetActive(false);
                     return;
                 }
                 else
@@ -47,6 +58,7 @@ public class Player : MonoBehaviour
                     diceScript.damageCalculated = false;
                     diceScript.lastRoller = null;
                     dodge = -1;
+                    dodgeUI.SetActive(false);
                     PlayerDeath();
                 }
             }
