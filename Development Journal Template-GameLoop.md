@@ -199,17 +199,15 @@ Here you can put links required for delivery of the task, ensure they are proper
 
 ### What did or did not work well and why?
 
-- What did not work well? What parts of the assignment that you felt did not fit the brief or ended up being lacklustre.
-- What did you think went very well? Were there any specific aspects you thought were very good?
+- I think after finishing the task, everything ended up working very well, especially the dodge chance. I think this worked very well because smoothly it works during gameplay and how much it adds to the gameplay instead of the player just being helpless to the damage that the enemy is about to deal. 
+
+- One thing that didn't go well would have to be the the critical hit chance while working on this task. This is because it caused lots of errors with my damage equation leading me to have to change variable types to be able to implement the critical hits.
 
 ### What would you do differently next time?
 
-- Are there any new approaches, methodologies or different software that you wish to incorporate if you have another chance?
-- Is there another aspect you believe should have been the focus?
+- Next time I think I would plan all the variables I would need for this project first so that I don't have to keep chaging each of them whenever I add a new one.
 
 ## Bibliography
 
-- Please use the [harvard referencing convention](https://mylibrary.uca.ac.uk/referencing).
 
-Video game development (2024) In: Wikipedia. At: https://en.wikipedia.org/w/index.php?title=Video_game_development&oldid=1240603537 (Accessed  03/09/2024).
 
