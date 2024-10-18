@@ -52,22 +52,132 @@ I found their implementation and choice great for the context of their narrative
 
 ### What was the process of completing the task? What influenced your decision making?
 
-- What was the process of completing the task at hand? Did you do any initial planning?
-- Did you receive any feedback from users, peers or lecturers? How did you react to it?
+-To complete the task, I started by making a critical hit variable, a dodge chance variable and a armour rating variable.
 
 <br>
 
 ```csharp
-using UnityEngine;
-public class HelloWorld : MonoBehaviour 
+    public int critcalHitChance = 20;
+    public int dodgeChance = 10;
+    public int armourRating = 2;
+```
+*Figure 1. An example of the variables I created for the task
+
+- Next I started by implementing the dodge chance to the player's health calculation script and I made a dodge dice roll so the player can roll to dodge
+
+<br>
+
+```csharp
+public void HealthCalculation()
 {
-    public void Start() 
+    //After the enemy has rolled, the player's health is reduced based on the enemie's damage
+    if (diceScript.lastRoller == "Enemy" && diceScript.damageCalculated == true)
     {
-        Debug.Log("Hello World!");
+        dodgeUI.SetActive(true);
+        if (dodge != -1)
+        {
+            //if the player succeeds with dodging, they take no damage
+            if (dodge <= dodgeChance)
+            {
+                Debug.Log("Player Dodged");
+                dodgeSuccess = "succeeded";
+                diceScript.damageCalculated = false;
+                diceScript.lastRoller = null;
+                //sets dodge back to -1 which is used as a replacement for null
+                dodge = -1;
+                dodgeUI.SetActive(false);
+                return;
+            }
+            //if the player doesn't succeed with dodging, they take damage
+            else
+            {
+                dodgeSuccess = "failed";
+                //reduces the enemies damage based on the player's armour
+                diceScript.enemyDamage = diceScript.enemyDamage - armourRating;
+                //damages the player based on the enemies damage
+                playerHealth = playerHealth - diceScript.enemyDamage;
+                Debug.Log("Player Health = " + playerHealth);
+                diceScript.damageCalculated = false;
+                diceScript.lastRoller = null;
+                //sets dodge back to -1 which is used as a replacement for null
+                dodge = -1;
+                dodgeUI.SetActive(false);
+                PlayerDeath();
+            }
+        }
     }
 }
 ```
-*Figure 1. An example of using a script as a figure. This script has a `Start()` method!*
+
+*Figure 2. The Health Calculation script with the dodge variable implemented in*
+
+```csharp
+   //the player rolls a dice to see if they can dodge the enemies attack
+   public void RollForDodge()
+   {
+       dodge = Random.Range(0, 100);
+       Debug.Log("Dodge Rolled " + dodge);
+       playerRolledDodge = true;
+   }
+```
+
+*Figure 3. The RollForDodge script that allows the player to roll a dice to determine if they dodge the damage they are about to take*
+
+- Next I implemented the critical hit chance variable to the player damage calculation script and made a roll for critical hit script so that the player can roll a dice to determine if they deal critical damage or not.
+
+```csharp
+public void PlayerDamageCalculation()
+{      
+    if (diceRolled == true && playerRolledCrit == true)
+    {
+        if (criticalHit <= playerScript.critcalHitChance)
+        {
+            criticalHitSuccess = "succeeded";
+            Debug.Log("Critical Hit");
+            //works out the damage based on the dice result and the amount of sides the dice has and the max damage to make the damage equal no matter the dice rolled
+            damage = (diceResult / diceSides) * maxDamage;
+            //increases the damage if the player rolls a crit
+            damage = damage * 1.5f;
+            Debug.Log("Damage = " + damage);
+            damageCalculated = true;
+            diceRolled = false;
+            playerRolledCrit = false;
+            criticalUI.SetActive(false);
+        }
+        else
+        {
+            criticalHitSuccess = "failed";
+            //works out the damage based on the dice result and the amount of sides the dice has and the max damage to make the damage equal no matter the dice rolled
+            damage = (diceResult / diceSides) * maxDamage;
+            Debug.Log("Damage = " + damage);
+            damageCalculated = true;
+            diceRolled = false;
+            playerRolledCrit = false;
+            criticalUI.SetActive(false);
+        }            
+    }
+}
+```
+
+*Figure 4. The PlayerDamageCalculation script with the critical hit variable implemented*
+
+```csharp
+ public void RollForCriticalHit()
+ {
+     criticalHit = Random.Range(0, 100);
+     Debug.Log("Critical Hit Rolled " + criticalHit);
+     playerRolledCrit = true;
+ }
+```
+*Figure 5. The RollForCriticalHit script that allows the player to roll a dice to determine if they deal extra damage to the enemy or not*
+
+- Lastly I implemented the armour rating variable so that the damage the player takes is reduced by the amount of armour the player has.
+
+```csharp
+diceScript.enemyDamage = diceScript.enemyDamage - armourRating;
+```
+
+*Figure 6. The script that reduces the damage that the player is about to take by the amount of armour the player has*
 
 ### What creative or technical approaches did you use or try, and how did this contribute to the outcome?
 
