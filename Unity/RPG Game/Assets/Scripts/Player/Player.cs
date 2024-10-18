@@ -9,35 +9,55 @@ public class Player : MonoBehaviour
     public double playerHealth = 20f;
     public float playerLevel = 1f;
     public float playerXP = 0f;
-    public int luck = 20;
+    public int critcalHitChance = 20;
+    public int dodgeChance = 10;
+    public int armourRating;
+    //-1 is used as null cant be used with an int so -1 acts as null
+    [HideInInspector] public int dodge = -1;
+    [HideInInspector] public bool playerRolledDodge = true;
 
 
     // Start is called before the first frame update
-    void Start()
-    {
-        diceScript = GameObject.FindObjectOfType<Dice>();
-    }
+    private void Start() => diceScript = GameObject.FindObjectOfType<Dice>();
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        HealthCalculation(); 
-        PlayerDeath();     
+        HealthCalculation();     
     }
     public void HealthCalculation()
     {
         //After the enemy has rolled, the player's health is reduced based on the enemie's damage
-        if (diceScript.lastRoller == "Enemy")
+        if (diceScript.lastRoller == "Enemy" && diceScript.damageCalculated == true)
         {
-            if (diceScript.damageCalculated == true)
+            if (dodge != -1)
             {
-                playerHealth = playerHealth - diceScript.enemyDamage;
-                Debug.Log("Player Health = " + playerHealth);
-                diceScript.damageCalculated = false;
-                diceScript.lastRoller = null;
+                if (dodge <= dodgeChance)
+                {
+                    Debug.Log("Player Dodged");
+                    diceScript.damageCalculated = false;
+                    diceScript.lastRoller = null;
+                    dodge = -1;
+                    return;
+                }
+                else
+                {
+                    playerHealth = playerHealth - diceScript.enemyDamage;
+                    Debug.Log("Player Health = " + playerHealth);
+                    diceScript.damageCalculated = false;
+                    diceScript.lastRoller = null;
+                    dodge = -1;
+                    PlayerDeath();
+                }
             }
-
         }
+    }
+
+    public void RollForDodge()
+    {
+        dodge = Random.Range(0, 100);
+        Debug.Log("Dodge Rolled " + dodge);
+        playerRolledDodge = true;
     }
 
     public void PlayerDeath()
@@ -46,6 +66,10 @@ public class Player : MonoBehaviour
         {
             playerHealth = 0;
             Destroy(gameObject);
+        }
+        else
+        {
+            return;
         }
     }
 }
