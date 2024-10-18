@@ -10,15 +10,9 @@ Callum Wade
 
 ### What sources or references have you identified as relevant to this task?
 
-- Since I was making a battle system, I researched into accessing variables from other scripts and using double variables. When working on the stats of each characted, I constantly needed to access varaibles from other scripts that would need changing. As for the double variables, I used them in my damage calculation. 
+- Since I was making a battle system, I researched into accessing variables from other scripts. When working on the stats of each characted, I constantly needed to access varaibles from other scripts that would need changing. 
 
 #### Sources
-
-- An opening paragraph about the source stating the author, developer or organisation, this paragraph should explain the source's influence, credentials, critical reception, awards, reputation or any issues with the source. For example, if the source is not reputable. If the source is a game, the issues that occurred during development or if had a poor launch.
-- List the aspects analysed in reference to the current task.
-- An ending paragraph stating what you enjoyed or disliked, what you agreed with or not agree with.
-
-```Markdown
 
 I needed to access variables from a different script so that they could be changed within the script I was currently working on. I had previously accessed variables from other scripts in past projects I had done but I needed a refresher on it. This led me to read a gamedevbeginner website on accessing variables from other scripts. (French, 2020)
 
