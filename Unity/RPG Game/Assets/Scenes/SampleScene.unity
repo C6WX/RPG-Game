@@ -487,8 +487,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 17
+  m_fontSizeBase: 17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -523,7 +523,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -0.27495578, w: 1.1225739}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -725,7 +725,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 781040147}
+      - m_Target: {fileID: 1828884004}
         m_TargetAssemblyTypeName: Dice, Assembly-CSharp
         m_MethodName: RollD6
         m_Mode: 1
@@ -1416,7 +1416,7 @@ RectTransform:
   m_GameObject: {fileID: 642673224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.9989, y: 2.4736388, z: 1.9989}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 230447904}
@@ -1424,7 +1424,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 522}
+  m_AnchoredPosition: {x: 0, y: 409}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &642673226
@@ -1532,7 +1532,7 @@ GameObject:
   - component: {fileID: 781040146}
   - component: {fileID: 781040149}
   - component: {fileID: 781040148}
-  - component: {fileID: 781040147}
+  - component: {fileID: 781040150}
   m_Layer: 5
   m_Name: Dice Roll Result
   m_TagString: Untagged
@@ -1559,27 +1559,6 @@ RectTransform:
   m_AnchoredPosition: {x: 693.39996, y: 462.13}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &781040147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781040145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fa3a71b3b19411479fdebac1b68ceea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  diceResult: 0
-  diceSides: 0
-  diceRolled: 0
-  maxDamage: 20
-  lastRoller: 
-  damageCalculated: 0
-  playerRolled: 0
-  damage: 0
-  enemyDamage: 0
 --- !u!114 &781040148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1677,6 +1656,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781040145}
   m_CullTransparentMesh: 1
+--- !u!114 &781040150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781040145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832d41ee59fb78448a3e7fe73fd03a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &839191611
 GameObject:
   m_ObjectHideFlags: 0
@@ -2150,7 +2141,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Roll For Critical Hit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2177,8 +2168,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 17
+  m_fontSizeBase: 17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2389,7 +2380,7 @@ RectTransform:
   m_GameObject: {fileID: 1622475798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.9989, y: 2.4736388, z: 1.9989}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1410115927}
@@ -2397,7 +2388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 304}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1622475800
@@ -2443,7 +2434,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1622475801}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1828884004}
+        m_TargetAssemblyTypeName: Dice, Assembly-CSharp
+        m_MethodName: RollForCriticalHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1622475801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2482,6 +2485,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622475798}
   m_CullTransparentMesh: 1
+--- !u!1 &1828884001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1828884003}
+  - component: {fileID: 1828884004}
+  m_Layer: 0
+  m_Name: DiceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1828884003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828884001}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1825.6484, y: 941.9294, z: -4.66804}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1828884004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828884001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa3a71b3b19411479fdebac1b68ceea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diceResult: 0
+  diceSides: 0
+  diceRolled: 0
+  maxDamage: 20
+  lastRoller: 
+  damageCalculated: 0
+  playerRolled: 0
+  damage: 0
+  enemyDamage: 0
+  criticalHit: -1
 --- !u!1 &1888337919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2565,7 +2622,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 781040147}
+      - m_Target: {fileID: 1828884004}
         m_TargetAssemblyTypeName: Dice, Assembly-CSharp
         m_MethodName: RollD20
         m_Mode: 1
@@ -2698,7 +2755,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 781040147}
+      - m_Target: {fileID: 1828884004}
         m_TargetAssemblyTypeName: Dice, Assembly-CSharp
         m_MethodName: RollD12
         m_Mode: 1
@@ -2892,5 +2949,6 @@ SceneRoots:
   - {fileID: 319978389}
   - {fileID: 942469366}
   - {fileID: 839191612}
+  - {fileID: 1828884003}
   - {fileID: 1380176918}
   - {fileID: 406565009}
