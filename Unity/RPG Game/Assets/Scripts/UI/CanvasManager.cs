@@ -17,6 +17,9 @@ public class CanvasManager : MonoBehaviour
     TMP_Text enemyRollText;
     Enemy enemyScript;
 
+    TMP_Text levelText;
+    LevelManager levelScript;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -30,6 +33,9 @@ public class CanvasManager : MonoBehaviour
         enemyHealthText = GetComponent<TMP_Text>();
         enemyRollText = GetComponent<TMP_Text>();
         enemyScript = GameObject.FindObjectOfType<Enemy>();
+
+        levelText = GetComponent<TMP_Text>();
+        levelScript = GameObject.FindObjectOfType<LevelManager>();
     }
 
     // Update is called once per frame
@@ -63,6 +69,11 @@ public class CanvasManager : MonoBehaviour
         if (gameObject.tag == "CriticalHit")
         {
             criticalHitText.text = ("Critical Hit: " + diceScript.criticalHitSuccess.ToString());
+        }
+
+        if (gameObject.tag == "LevelDisplay")
+        {
+            levelText.text = ("Level: " + levelScript.currentLevel + "\n" + "Enemies Beaten: " + levelScript.enemiesBeaten);
         }
 
     }

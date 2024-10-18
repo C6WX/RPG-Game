@@ -9,6 +9,9 @@ TagManager:
   - DiceResult
   - EnemyHealth
   - EnemyRoll
+  - PlayerDodge
+  - CriticalHit
+  - LevelDisplay
   layers:
   - Default
   - TransparentFX
