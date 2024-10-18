@@ -7,35 +7,22 @@ Callum Wade
 2404781
 
 ## Research
-
+```Markdown
 ### What sources or references have you identified as relevant to this task?
 
 - Since I was adding new int and float variables to the game, I researched different operators that i could use in if statements and equations.
-
-
-```Markdown
-# Example
-
-As I have done research regarding the audio identity and developing audio assets for this project in previous formative assignments. I wanted to look into specific Unreal and Wwise systems that will help create a more immersive experience. I wanted to focus on official documentation to improve my ability to learn new techniques without explicit instructions.
-
-I also wanted a creative source to help develop the parachute audio assets and learn how it should function within the game’s narrative.
 ```
 
+```Markdown
 #### Sources
+For the dodge chance and critical hit chance, I had to use lots different operators for different if statements and equations which lead me to research them using the websites on arithmatic operators and comparison operators by w3schools (C# Operators, s.d.), (C# Comparison Operators, s.d.).
 
-- An opening paragraph about the source stating the author, developer or organisation, this paragraph should explain the source's influence, credentials, critical reception, awards, reputation or any issues with the source. For example, if the source is not reputable. If the source is a game, the issues that occurred during development or if had a poor launch.
-- List the aspects analysed in reference to the current task.
-- An ending paragraph stating what you enjoyed or disliked, what you agreed with or not agree with.
+The operators shown on both websites that I ended up using are - (subtraction), + (addition), <= (less than or equal to), == (equal to) and != (not equal too).
+
+I liked using this website as it made it really simple to find which operators I needed for my problems and with examples on how I could use them witin my code. 
+```
 
 ```Markdown
-# Example Documentation
-
-I wanted to create an emitter which takes advantage of spread and focus, which was a technique I learned from a previous assignment where the spatialisation of an object changes depending on distance. I also wanted to work specifically with a `Spline Component` to encapsulate the entire ship with an “Ocean Emitter”. This led me to read the Unreal Blueprints API References and Wwise 3D Positioning documentation (Unreal Engine Blueprint API Reference | Unreal Engine 5.4 Documentation | Epic Developer Community, s.d., AudioKinetic Inc, s.d.).
-
-I found a Blueprint node called “Find Location Closest to World Location" which returns a `Vector3` on the spline position closest to another `Vector3`, I believe this can help move the emitter towards the player(Finding time of given results from (Find Location Closest to World Location) from Splines - Programming & Scripting / Blueprint, 2023).
-
-I found the Unreal documentation clear and easy to navigate, however it was much harder to find specific nodes unless you are familiar with the naming conventions used by Unreal, such as “World Location” and the API documentation is separated from the property references. The Wwise documentation on the other hand is much easier to navigate as they have core topics such as “Using Sounds and Motion to Enhance Gameplay” and examples of how they can be applied, which the unreal documentation lacked. 
-
 # Game Source
 Team Fortress 2 is a first person shooter game developed by Valve Corporation. The game uses critical hits to give the players a chance to deal high damage to the enemy they are fighting(Team Fortress 2, 2007)
 
@@ -188,7 +175,7 @@ diceScript.enemyDamage = diceScript.enemyDamage - armourRating;
 Here you can put links required for delivery of the task, ensure they are properly labelled appropriately and the links function. The required components can vary between tasks, you can find a definative list in the Assessment Information. Images and code snippets can be embedded and annotated if appropriate.
 
 - [Video Link](https://)
-- [Github Link](https://)
+- [Github Link](https://github.com/C6WX/RPG-Game)
 - [Itch.io Link](https://)
 
 ## Critical Reflection
@@ -205,6 +192,8 @@ Here you can put links required for delivery of the task, ensure they are proper
 
 ## Bibliography
 
-‘Critical Hits - Official TF2 Wiki | Official Team Fortress Wiki’. Accessed 18 October 2024. https://wiki.teamfortress.com/wiki/Critical_hits.
+Critical hits - Official TF2 Wiki | Official Team Fortress Wiki (s.d.) At: https://wiki.teamfortress.com/wiki/Critical_hits (Accessed  18/10/2024).
 
+C# Operators (s.d.) At: https://www.w3schools.com/cs/cs_operators.php (Accessed  18/10/2024).
 
+C# Comparison Operators (s.d.) At: https://www.w3schools.com/cs/cs_operators_comparison.php (Accessed  18/10/2024).
