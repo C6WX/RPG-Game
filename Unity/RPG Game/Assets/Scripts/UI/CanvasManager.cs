@@ -6,9 +6,11 @@ using UnityEngine;
 public class CanvasManager : MonoBehaviour
 {
     TMP_Text diceResultText;
+    TMP_Text criticalHitText;
     Dice diceScript;
 
     TMP_Text playerHealthText;
+    TMP_Text playerDodgeText;
     Player playerScript;
 
     TMP_Text enemyHealthText;
@@ -19,6 +21,7 @@ public class CanvasManager : MonoBehaviour
     private void Start()
     {
         diceResultText = GetComponent<TMP_Text>();
+        criticalHitText = GetComponent<TMP_Text>();
         diceScript = GameObject.FindObjectOfType<Dice>();
 
         playerHealthText = GetComponent<TMP_Text>();
@@ -51,5 +54,16 @@ public class CanvasManager : MonoBehaviour
         {
             enemyRollText.text = ("Enemy Rolled: " + enemyScript.enemyRollResult.ToString());
         }
+
+        if (gameObject.tag == "PlayerDodge")
+        {
+            enemyRollText.text = ("Dodge: " + playerScript.dodgeSuccess.ToString());
+        }
+
+        if (gameObject.tag == "CriticalHit")
+        {
+            criticalHitText.text = ("Critical Hit: " + diceScript.criticalHitSuccess.ToString());
+        }
+
     }
 }

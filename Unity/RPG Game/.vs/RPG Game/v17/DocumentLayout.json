@@ -7,32 +7,16 @@
       "RelativeMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\canvasmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|c:\\users\\2404781\\documents\\github\\rpg-game\\unity\\rpg game\\assets\\scripts\\ui\\enemy roll ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\enemy roll ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|c:\\users\\2404781\\documents\\github\\rpg-game\\unity\\rpg game\\assets\\scripts\\ui\\enemy health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\enemy health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|c:\\users\\2404781\\documents\\github\\rpg-game\\unity\\rpg game\\assets\\scripts\\ui\\player health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\player health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|c:\\users\\2404781\\documents\\github\\rpg-game\\unity\\rpg game\\assets\\scripts\\dice\\dice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\assets\\scripts\\dice\\dice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dice\\dice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|c:\\users\\2404781\\documents\\github\\rpg-game\\unity\\rpg game\\assets\\scripts\\ui\\dice result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\dice result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|c:\\users\\2404781\\documents\\github\\rpg-game\\unity\\rpg game\\assets\\scripts\\enemies\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\assets\\scripts\\enemies\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|c:\\users\\2404781\\documents\\github\\rpg-game\\unity\\rpg game\\assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2204C7A-CD5F-641A-ACE3-F478E5C0FA7B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -52,79 +36,40 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\CanvasManager.cs",
               "ToolTip": "C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\Assets\\Scripts\\UI\\CanvasManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\CanvasManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-18T13:12:56.746Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Enemy Roll UI.cs",
-              "DocumentMoniker": "C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\Assets\\Scripts\\UI\\Enemy Roll UI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Enemy Roll UI.cs",
-              "ToolTip": "C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\Assets\\Scripts\\UI\\Enemy Roll UI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\Enemy Roll UI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T12:19:19.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Enemy Health.cs",
-              "DocumentMoniker": "C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\Assets\\Scripts\\UI\\Enemy Health.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Enemy Health.cs",
-              "ToolTip": "C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\Assets\\Scripts\\UI\\Enemy Health.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\Enemy Health.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T12:19:17.765Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Player Health.cs",
-              "DocumentMoniker": "C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\Assets\\Scripts\\UI\\Player Health.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Player Health.cs",
-              "ToolTip": "C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\Assets\\Scripts\\UI\\Player Health.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\Player Health.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T12:19:19.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Dice Result.cs",
-              "DocumentMoniker": "C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\Assets\\Scripts\\UI\\Dice Result.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Dice Result.cs",
-              "ToolTip": "C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\Assets\\Scripts\\UI\\Dice Result.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\Dice Result.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T12:19:16.592Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Dice.cs",
               "DocumentMoniker": "C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\Assets\\Scripts\\Dice\\Dice.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Dice\\Dice.cs",
               "ToolTip": "C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\Assets\\Scripts\\Dice\\Dice.cs",
               "RelativeToolTip": "Assets\\Scripts\\Dice\\Dice.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBgAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwDgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-18T12:18:17.323Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\Assets\\Scripts\\Player\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Player.cs",
+              "ToolTip": "C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\Assets\\Scripts\\Player\\Player.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\Player.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwFoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T12:20:09.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\Assets\\Scripts\\Enemies\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Enemy.cs",
@@ -133,19 +78,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-18T12:35:01.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\Assets\\Scripts\\Player\\Player.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Player.cs",
-              "ToolTip": "C:\\Users\\2404781\\Documents\\GitHub\\RPG-Game\\Unity\\RPG Game\\Assets\\Scripts\\Player\\Player.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\Player.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwCMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T12:20:09.015Z",
               "EditorCaption": ""
             }
           ]

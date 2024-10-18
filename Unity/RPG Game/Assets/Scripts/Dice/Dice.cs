@@ -14,6 +14,7 @@ public class Dice : MonoBehaviour
     public float enemyDamage;
     [HideInInspector] private bool playerRolledCrit = false;
     [HideInInspector] public int criticalHit = -1;
+    [HideInInspector] public string criticalHitSuccess = null;
 
     private Enemy enemyScript;
     private Player playerScript;
@@ -40,6 +41,7 @@ public class Dice : MonoBehaviour
         {
             if (criticalHit <= playerScript.critcalHitChance)
             {
+                criticalHitSuccess = "succeeded";
                 Debug.Log("Critical Hit");
                 //works out the damage based on the dice result and the amount of sides the dice has and the max damage to make the damage equal no matter the dice rolled
                 damage = (diceResult / diceSides) * maxDamage;
@@ -53,6 +55,7 @@ public class Dice : MonoBehaviour
             }
             else
             {
+                criticalHitSuccess = "failed";
                 //works out the damage based on the dice result and the amount of sides the dice has and the max damage to make the damage equal no matter the dice rolled
                 damage = (diceResult / diceSides) * maxDamage;
                 Debug.Log("Damage = " + damage);
