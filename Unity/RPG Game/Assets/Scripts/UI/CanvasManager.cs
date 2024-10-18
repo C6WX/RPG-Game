@@ -41,40 +41,29 @@ public class CanvasManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     { 
-        if (gameObject.tag == "DiceResult")
+        switch(gameObject.tag)
         {
-            diceResultText.text = ("Player rolled: " + diceScript.diceResult.ToString());
-        }
-       
-        if (gameObject.tag == "PlayerHealth")
-        {
-            playerHealthText.text = ("Player Health: " + playerScript.playerHealth.ToString());
-        }
-
-        if (gameObject.tag == "EnemyHealth")
-        {
-            enemyHealthText.text = ("Enemy Health: " + enemyScript.enemyHealth.ToString());
-        }
-
-        if (gameObject.tag == "EnemyRoll")
-        {
-            enemyRollText.text = ("Enemy Rolled: " + enemyScript.enemyRollResult.ToString());
-        }
-
-        if (gameObject.tag == "PlayerDodge")
-        {
-            enemyRollText.text = ("Dodge: " + playerScript.dodgeSuccess.ToString());
-        }
-
-        if (gameObject.tag == "CriticalHit")
-        {
-            criticalHitText.text = ("Critical Hit: " + diceScript.criticalHitSuccess.ToString());
-        }
-
-        if (gameObject.tag == "LevelDisplay")
-        {
-            levelText.text = ("Level: " + levelScript.currentLevel + "\n" + "Enemies Beaten: " + levelScript.enemiesBeaten);
-        }
-
+            case "DiceResult": 
+                diceResultText.text = ("Player rolled: " + diceScript.diceResult.ToString()); 
+                break;
+            case "PlayerHealth":
+                playerHealthText.text = ("Player Health: " + playerScript.playerHealth.ToString());
+                break;
+            case "EnemyHealth":
+                enemyHealthText.text = ("Enemy Health: " + enemyScript.enemyHealth.ToString());
+                break;
+            case "EnemyRoll":
+                enemyRollText.text = ("Enemy Rolled: " + enemyScript.enemyRollResult.ToString());
+                break;
+            case "PlayerDodge":
+                enemyRollText.text = ("Dodge: " + playerScript.dodgeSuccess.ToString());
+                break;
+            case "CriticalHit":
+                criticalHitText.text = ("Critical Hit: " + diceScript.criticalHitSuccess.ToString());
+                break;
+            case "LevelDisplay":
+                levelText.text = ("Level: " + levelScript.currentLevel + "\n" + "Enemies Beaten: " + levelScript.enemiesBeaten);
+                break;
+        }      
     }
 }
