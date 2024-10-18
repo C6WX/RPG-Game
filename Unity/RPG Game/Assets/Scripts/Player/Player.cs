@@ -24,7 +24,9 @@ public class Player : MonoBehaviour
     {
         diceScript = GameObject.FindObjectOfType<Dice>();
         dodgeUI = GameObject.Find("Roll for dodge");     
-        dodgeUI.SetActive(false);       
+        dodgeUI.SetActive(false);   
+        
+        //Make a switch variable that changes the player's stats based on the player's level
     }
        
        

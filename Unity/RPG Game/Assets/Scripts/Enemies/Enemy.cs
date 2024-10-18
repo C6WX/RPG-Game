@@ -7,11 +7,12 @@ public class Enemy : MonoBehaviour
 {
     Dice diceScript;
     LevelManager levelScript;
+    Player playerScript;
 
     public int enemyDiceSides;
-    public float enemyHealth = 30f;
-    private int enemyDifficulty = 0;
-    public int enemyMaxDamage = 15;
+    public float enemyHealth;
+    private int enemyDifficulty;
+    public int enemyMaxDamage;
     public bool enemyRolled = false;
     public int enemyRollResult;
 
@@ -21,6 +22,26 @@ public class Enemy : MonoBehaviour
     {
         diceScript = GameObject.FindObjectOfType<Dice>();
         levelScript = GameObject.FindObjectOfType<LevelManager>();
+        playerScript = GameObject.FindObjectOfType<Player>();
+
+        //randomly generates the enemies' difficulty based on the current level
+        enemyDifficulty = Random.Range(1, levelScript.currentLevel);
+        Debug.Log("enemy difficulty = " + enemyDifficulty);
+
+        //the enemy difficulty affects the enemies' stats
+        switch (enemyDifficulty)
+        {
+            case 1:
+                enemyDiceSides = 20;
+                enemyHealth = 10;
+                enemyMaxDamage = 15;
+                break;
+            case 2:
+                enemyDiceSides = 20;
+                enemyHealth = 15;
+                enemyMaxDamage = 20;
+                break;
+        }
     }
 
     void Update()
@@ -28,6 +49,9 @@ public class Enemy : MonoBehaviour
         EnemyDiceRoll();
         EnemyHealthCalculation();
         EnemyDeath();
+
+        //make a switch that changes the enemies stats based on the difficulty given to the enemy
+       
     }
 
 
@@ -36,7 +60,7 @@ public class Enemy : MonoBehaviour
         if (diceScript.playerRolled == true)
         {
             //the enemy difficulty determines the amount of sides the dice has
-            enemyDiceSides = 20 - enemyDifficulty;
+            //enemyDiceSides = 20 - enemyDifficulty;
             enemyRollResult = Random.Range(1, enemyDiceSides);
             Debug.Log("Enemy rolled a " + enemyDiceSides + " sided dice and rolled a " + enemyRollResult);
             diceScript.lastRoller = "Enemy";
@@ -67,7 +91,11 @@ public class Enemy : MonoBehaviour
         {
             enemyHealth = 0;
             levelScript.enemiesBeaten++;
-            Destroy(gameObject);
+            playerScript.playerXP = playerScript.playerXP + 10;
+            //Give the player 10 health
+            playerScript.playerHealth = playerScript.playerHealth + 10;
+            gameObject.SetActive(false);
+            gameObject.SetActive(true);
         }
     }
 }
