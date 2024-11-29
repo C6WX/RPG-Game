@@ -33,14 +33,13 @@ public class Player : MonoBehaviour
         
         //Make a switch variable that changes the player's stats based on the player's level
     }
-       
-       
-
+    
     // Update is called once per frame
     private void Update()
     {
         HealthCalculation();
-        if (diceScript.playerRolledCrit = true)
+        
+        if (diceScript.diceRolled == true)
         {
             anim.Play("HeroKnight_Attack1");
         }

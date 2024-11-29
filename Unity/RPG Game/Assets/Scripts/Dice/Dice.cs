@@ -13,7 +13,7 @@ public class Dice : MonoBehaviour
     public float damage;
     public float enemyDamage;
     public string currentRoller = "Player";
-    [HideInInspector] public bool playerRolledCrit = false;
+    public bool playerRolledCrit = false;
     [HideInInspector] public int criticalHit = -1;
     [HideInInspector] public string criticalHitSuccess = null;
 
@@ -26,6 +26,7 @@ public class Dice : MonoBehaviour
     {
         
         playerScript = GameObject.FindObjectOfType<Player>();
+        // playerScript = Player.GetComponent<Animation>();
         criticalUI = GameObject.Find("Roll for critical hit");
         criticalUI.SetActive(false);
     }
