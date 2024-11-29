@@ -59,6 +59,7 @@ public class Enemy : MonoBehaviour
     {
         if (diceScript.playerRolled == true && diceScript.lastRoller != "Enemy")
         {
+            diceScript.currentRoller = "Enemy";
             //the enemy difficulty determines the amount of sides the dice has
             //enemyDiceSides = 20 - enemyDifficulty;
             enemyRollResult = Random.Range(1, enemyDiceSides);

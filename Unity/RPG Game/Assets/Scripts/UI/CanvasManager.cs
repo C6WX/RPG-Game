@@ -19,7 +19,9 @@ public class CanvasManager : MonoBehaviour
 
     TMP_Text levelText;
     LevelManager levelScript;
-
+    
+    TMP_Text currentTurnText;
+    
     // Start is called before the first frame update
     private void Start()
     {
@@ -36,6 +38,8 @@ public class CanvasManager : MonoBehaviour
 
         levelText = GetComponent<TMP_Text>();
         levelScript = GameObject.FindObjectOfType<LevelManager>();
+        
+        currentTurnText = GetComponent<TMP_Text>();
     }
 
     // Update is called once per frame
@@ -64,6 +68,9 @@ public class CanvasManager : MonoBehaviour
             case "LevelDisplay":
                 levelText.text = ("Level: " + levelScript.currentLevel + "\n" + "Enemies Beaten: " + levelScript.enemiesBeaten);
                 break;
-        }      
+            case "CurrentTurn":
+                currentTurnText.text = ("Current Turn: " + diceScript.currentRoller);
+                break;
+        }    
     }
 }

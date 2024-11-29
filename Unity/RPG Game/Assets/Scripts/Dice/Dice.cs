@@ -12,6 +12,7 @@ public class Dice : MonoBehaviour
     public bool playerRolled = false;
     public float damage;
     public float enemyDamage;
+    public string currentRoller = "Player";
     [HideInInspector] private bool playerRolledCrit = false;
     [HideInInspector] public int criticalHit = -1;
     [HideInInspector] public string criticalHitSuccess = null;

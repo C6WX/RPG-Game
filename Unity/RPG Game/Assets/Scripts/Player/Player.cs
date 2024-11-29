@@ -57,7 +57,6 @@ public class Player : MonoBehaviour
                     //sets dodge back to -1 which is used as a replacement for null
                     dodge = -1;
                     dodgeUI.SetActive(false);
-                    return;
                 }
                 //if the player doesn't succeed with dodging, they take damage
                 else
@@ -75,6 +74,7 @@ public class Player : MonoBehaviour
                     dodgeUI.SetActive(false);
                     PlayerDeath();
                 }
+                diceScript.currentRoller = "Player";
             }
         }
     }
