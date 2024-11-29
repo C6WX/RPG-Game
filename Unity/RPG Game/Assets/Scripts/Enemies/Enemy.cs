@@ -16,6 +16,9 @@ public class Enemy : MonoBehaviour
     public bool enemyRolled = false;
     public int enemyRollResult;
 
+    public Transform enemyPrefab;
+    public Transform parent;
+
 
     // Start is called before the first frame update
     void Start()
@@ -33,12 +36,12 @@ public class Enemy : MonoBehaviour
         {
             case 1:
                 enemyDiceSides = 20;
-                enemyHealth = 10;
+                enemyHealth = 20;
                 enemyMaxDamage = 15;
                 break;
             case 2:
                 enemyDiceSides = 20;
-                enemyHealth = 15;
+                enemyHealth = 25;
                 enemyMaxDamage = 20;
                 break;
         }
@@ -49,15 +52,12 @@ public class Enemy : MonoBehaviour
         EnemyDiceRoll();
         EnemyHealthCalculation();
         EnemyDeath();
-
-        //make a switch that changes the enemies stats based on the difficulty given to the enemy
-       
     }
 
 
     public void EnemyDiceRoll()
     {
-        if (diceScript.playerRolled == true)
+        if (diceScript.playerRolled == true && diceScript.lastRoller != "Enemy")
         {
             //the enemy difficulty determines the amount of sides the dice has
             //enemyDiceSides = 20 - enemyDifficulty;
@@ -92,10 +92,22 @@ public class Enemy : MonoBehaviour
             enemyHealth = 0;
             levelScript.enemiesBeaten++;
             playerScript.playerXP = playerScript.playerXP + 10;
-            //Give the player 10 health
-            playerScript.playerHealth = playerScript.playerHealth + 10;
-            gameObject.SetActive(false);
-            gameObject.SetActive(true);
+            //Resets the player's health
+            playerScript.playerHealth = playerScript.maxHealth;
+            NewEnemy();
+            //gameObject.SetActive(false);
+            Destroy(gameObject);
         }
+    }
+
+    private void NewEnemy()
+    {
+        //Resets game variables and spawns a new enemy
+        diceScript.playerRolled = false;
+        diceScript.lastRoller = "Enemy";
+        diceScript.damageCalculated = false;
+        diceScript.diceRolled = false;
+        playerScript.playerRolledDodge = true;
+        Instantiate(enemyPrefab, new Vector3(3.29f, -2.8f, -9.999264f), Quaternion.identity, parent);
     }
 }

@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 415, y: -66.99997}
+  m_AnchoredPosition: {x: 415, y: -36}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5017848876781208227
@@ -166,7 +166,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4636614741323716965
 Transform:
   m_ObjectHideFlags: 0
@@ -273,6 +273,8 @@ MonoBehaviour:
   enemyMaxDamage: 15
   enemyRolled: 0
   enemyRollResult: 0
+  enemyPrefab: {fileID: 4636614741323716965}
+  parent: {fileID: 0}
 --- !u!1 &5289410977821234311
 GameObject:
   m_ObjectHideFlags: 0

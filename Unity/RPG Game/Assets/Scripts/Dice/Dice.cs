@@ -23,7 +23,7 @@ public class Dice : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        enemyScript = GameObject.FindObjectOfType<Enemy>();
+        
         playerScript = GameObject.FindObjectOfType<Player>();
         criticalUI = GameObject.Find("Roll for critical hit");
         criticalUI.SetActive(false);
@@ -31,6 +31,7 @@ public class Dice : MonoBehaviour
 
     private void Update()
     {
+        enemyScript = GameObject.FindObjectOfType<Enemy>();
         PlayerDamageCalculation();
         EnemyDamageCalculation();
     }

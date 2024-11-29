@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public GameObject dodgeUI;      
 
     public float playerHealth = 20f;
+    public float maxHealth;
     public float playerLevel = 1f;
     public float playerXP = 0f;
     public int critcalHitChance = 20;
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        maxHealth = playerHealth;
         diceScript = GameObject.FindObjectOfType<Dice>();
         dodgeUI = GameObject.Find("Roll for dodge");     
         dodgeUI.SetActive(false);   
