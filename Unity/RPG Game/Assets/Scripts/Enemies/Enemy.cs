@@ -109,6 +109,6 @@ public class Enemy : MonoBehaviour
         diceScript.damageCalculated = false;
         diceScript.diceRolled = false;
         playerScript.playerRolledDodge = true;
-        Instantiate(enemyPrefab, new Vector3(3.29f, -2.8f, -9.999264f), Quaternion.identity, parent);
+        Instantiate(enemyPrefab, new Vector3(3.19f, -3.84f, -4.749632f), Quaternion.identity, parent);
     }
 }

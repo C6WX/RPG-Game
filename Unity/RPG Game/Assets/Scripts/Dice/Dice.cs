@@ -13,7 +13,7 @@ public class Dice : MonoBehaviour
     public float damage;
     public float enemyDamage;
     public string currentRoller = "Player";
-    [HideInInspector] private bool playerRolledCrit = false;
+    [HideInInspector] public bool playerRolledCrit = false;
     [HideInInspector] public int criticalHit = -1;
     [HideInInspector] public string criticalHitSuccess = null;
 

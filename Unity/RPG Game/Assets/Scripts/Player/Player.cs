@@ -5,7 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Dice diceScript;
-    public GameObject dodgeUI;      
+    public GameObject dodgeUI;   
+    
+    public Animation anim;
 
     public float playerHealth = 20f;
     public float maxHealth;
@@ -25,7 +27,8 @@ public class Player : MonoBehaviour
     {
         maxHealth = playerHealth;
         diceScript = GameObject.FindObjectOfType<Dice>();
-        dodgeUI = GameObject.Find("Roll for dodge");     
+        dodgeUI = GameObject.Find("Roll for dodge");  
+        anim = GetComponent<Animation>();
         dodgeUI.SetActive(false);   
         
         //Make a switch variable that changes the player's stats based on the player's level
@@ -36,7 +39,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        HealthCalculation();     
+        HealthCalculation();
+        if (diceScript.playerRolledCrit = true)
+        {
+            anim.Play("HeroKnight_Attack1");
+        }
     }
 
     public void HealthCalculation()
