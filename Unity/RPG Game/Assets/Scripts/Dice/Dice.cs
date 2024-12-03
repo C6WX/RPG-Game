@@ -17,6 +17,8 @@ public class Dice : MonoBehaviour
     [HideInInspector] public int criticalHit = -1;
     [HideInInspector] public string criticalHitSuccess = null;
 
+    //[HideInInspector] public bool playAttackAnim = false;
+
     private Enemy enemyScript;
     private Player playerScript;
     private GameObject criticalUI;
@@ -99,6 +101,7 @@ public class Dice : MonoBehaviour
             diceResult = d6Result;
             Debug.Log("D6 rolled a " + d6Result);
             diceRolled = true;
+            //playAttackAnim = true;
             lastRoller = "Player";
             playerScript.playerRolledDodge = false;
             criticalUI.SetActive(true);
@@ -115,6 +118,7 @@ public class Dice : MonoBehaviour
             diceResult = d12Result;
             Debug.Log("D12 rolled a " + d12Result);
             diceRolled = true;
+            //playAttackAnim = true;
             lastRoller = "Player";
             playerScript.playerRolledDodge = false;
             criticalUI.SetActive(true);
@@ -131,6 +135,7 @@ public class Dice : MonoBehaviour
             diceResult = d20Result;
             Debug.Log("D20 rolled a " + d20Result);
             diceRolled = true;
+            //playAttackAnim = true;
             lastRoller = "Player";
             playerScript.playerRolledDodge = false;
             criticalUI.SetActive(true);

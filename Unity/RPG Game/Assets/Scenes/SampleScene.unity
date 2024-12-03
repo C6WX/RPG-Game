@@ -1142,7 +1142,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dodgeUI: {fileID: 0}
-  anim: {fileID: 319978392}
   playerHealth: 30
   maxHealth: 0
   playerLevel: 1
@@ -1212,9 +1211,9 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319978385}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: 0bafac48b1090284da2048c29bc986ff, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 0bafac48b1090284da2048c29bc986ff, type: 2}
   m_WrapMode: 0

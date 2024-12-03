@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     Dice diceScript;
     public GameObject dodgeUI;   
     
-    public Animation anim;
+    //public Animation anim;
 
     public float playerHealth = 20f;
     public float maxHealth;
@@ -21,16 +21,16 @@ public class Player : MonoBehaviour
     [HideInInspector] public int dodge = -1;
     [HideInInspector] public bool playerRolledDodge = true;
 
-
     // Start is called before the first frame update
     private void Start()
     {
         maxHealth = playerHealth;
         diceScript = GameObject.FindObjectOfType<Dice>();
         dodgeUI = GameObject.Find("Roll for dodge");  
-        anim = GetComponent<Animation>();
-        dodgeUI.SetActive(false);   
-        
+        //anim = GetComponent<Animation>();
+        dodgeUI.SetActive(false);
+
+        //anim["HeroKnight_Attack1"].layer = 1;
         //Make a switch variable that changes the player's stats based on the player's level
     }
     
@@ -39,10 +39,12 @@ public class Player : MonoBehaviour
     {
         HealthCalculation();
         
-        if (diceScript.diceRolled == true)
-        {
-            anim.Play("HeroKnight_Attack1");
-        }
+        //if (diceScript.playAttackAnim == true)
+        //{
+        //    Debug.Log("play animation");
+        //    anim.Play("HeroKnight_Attack1");
+        //    diceScript.playAttackAnim = false;
+        //}
     }
 
     public void HealthCalculation()
