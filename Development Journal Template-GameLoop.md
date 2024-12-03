@@ -197,3 +197,9 @@ Critical hits - Official TF2 Wiki | Official Team Fortress Wiki (s.d.) At: https
 C# Operators (s.d.) At: https://www.w3schools.com/cs/cs_operators.php (Accessed  18/10/2024).
 
 C# Comparison Operators (s.d.) At: https://www.w3schools.com/cs/cs_operators_comparison.php (Accessed  18/10/2024).
+
+## Declared Assets
+
+https://assetstore.unity.com/packages/2d/characters/bandits-pixel-art-104130
+
+https://assetstore.unity.com/packages/2d/characters/hero-knight-pixel-art-165188
