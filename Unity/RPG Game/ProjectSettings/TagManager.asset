@@ -13,6 +13,8 @@ TagManager:
   - CriticalHit
   - LevelDisplay
   - CurrentTurn
+  - PlayerLevel
+  - PlayerXP
   layers:
   - Default
   - TransparentFX
