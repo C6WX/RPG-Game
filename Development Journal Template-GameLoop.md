@@ -174,9 +174,9 @@ diceScript.enemyDamage = diceScript.enemyDamage - armourRating;
 
 Here you can put links required for delivery of the task, ensure they are properly labelled appropriately and the links function. The required components can vary between tasks, you can find a definative list in the Assessment Information. Images and code snippets can be embedded and annotated if appropriate.
 
-- [Video Link](https://)
+- [Video Link](https://youtu.be/pYL_tw9V-fk)
 - [Github Link](https://github.com/C6WX/RPG-Game)
-- [Itch.io Link](https://)
+- [Itch.io Link](https://c6wx.itch.io/idle-dice)
 
 ## Critical Reflection
 
