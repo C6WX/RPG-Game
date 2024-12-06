@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Development Journal Template-Dice.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="rpg---dice">RPG - Dice</h1>
+<p>Fundementals of Game Development</p>
+<p>Callum Wade</p>
+<p>2404781</p>
+<h2 id="research">Research</h2>
+<pre class="hljs"><code><div><span class="hljs-section">### What sources or references have you identified as relevant to this task?</span>
+<span class="hljs-bullet">
+- </span>Since i made a dice rolling script, i wanted to further my research into Random.Range within C#. To do this i looked on the unity documentation website.
+</div></code></pre>
+<h4 id="sources">Sources</h4>
+<pre class="hljs"><code><div>Making a dice roll within C# uses Random.Range which i have learnt during previous work i have done inside of unity. However i still learnt more on Random.Range to see how far it can go when programming. This lead me to read the unity documentation on Random.Range. (Technologies, s.d.)
+
+Within the website I found it interesting how Random.Range can be used for things such as getting random numbers to determine an objects position within a Vector3.
+
+I liked that the website showed me another way I could use Random.Range but i felt that only showing one way of using it felt like too little of an example of it's use.
+
+<span class="hljs-section">#### Game Source</span>
+Five Nights At Freddys is a horror game developed by Scott Cawthon. Within the programming of the game, Random.Range is used to determine the characters movement(Five Nights at Freddy's, 2014).
+
+Within the game, enemies have to move closer to the player to make the player lose. The way they are programmed is so that, based on the difficulty each enemy is set to, a number between 1 and 20 is selected to be there movement number, if the number that the Random.Range choses is less then the movement number, then the character can move closer to the player, if it's not below the number then they can't move. In the custom mode the player can change the enemie's difficulty up to 20 which means evertime the enemy gets a chance to move, they can move.
+
+I find this to be a great and really interesting use of how a single bit of code can be used as the main piece of code for a whole game and how advanced a single piece of code can become when used right.
+
+</div></code></pre>
+<h2 id="implementation">Implementation</h2>
+<h3 id="what-was-the-process-of-completing-the-task-what-influenced-your-decision-making">What was the process of completing the task? What influenced your decision making?</h3>
+<ul>
+<li>To complete the task i started with making the six sided dice by making a public void for the first dice. Within the void i used a Random.Range(1,7) so that it generated a number like if you rolled a six sided dice. I assigned the result from the the Random.Range with an int variable called d6Result. The next line was a Debug.Log that sent the number generated to the log.</li>
+</ul>
+<br>
+<pre class="hljs"><code><div>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">RollD6</span>(<span class="hljs-params"></span>)</span>
+    {
+        <span class="hljs-keyword">int</span> d6Result = Random.Range(<span class="hljs-number">1</span>, <span class="hljs-number">7</span>);
+        Debug.Log(<span class="hljs-string">"D6 rolled a "</span> + d6Result);
+    }
+</div></code></pre>
+<p><em>Figure 1. An example of the script used for rolling the six sided dice</em></p>
+<p>-Then i just copied the code for the other two dices but changed the variables and values to match the dice that they will be used for.</p>
+<br>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">RollD12</span>(<span class="hljs-params"></span>)</span>
+{
+    <span class="hljs-keyword">int</span> d12Result = Random.Range(<span class="hljs-number">1</span>, <span class="hljs-number">13</span>);
+    Debug.Log(<span class="hljs-string">"D12 rolled a "</span> + d12Result);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">RollD20</span>(<span class="hljs-params"></span>)</span>
+{
+    <span class="hljs-keyword">int</span> d20Result = Random.Range(<span class="hljs-number">1</span>, <span class="hljs-number">21</span>);
+    Debug.Log(<span class="hljs-string">"D20 rolled a "</span> + d20Result);
+}
+</div></code></pre>
+<p><em>Figure 2. An example of the script used for the D12 and D20</em></p>
+<ul>
+<li>Then i just used a void Start to call all the voids to roll all the dices at once</li>
+</ul>
+<br>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>(<span class="hljs-params"></span>)</span>
+{
+    RollD6();
+    RollD12();
+    RollD20();
+}
+</div></code></pre>
+<ul>
+<li>
+<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+<h3 id="what-creative-or-technical-approaches-did-you-use-or-try-and-how-did-this-contribute-to-the-outcome">What creative or technical approaches did you use or try, and how did this contribute to the outcome?</h3>
+<ul>
+<li>A new thing i did, different from the task is adding buttons to roll each seperate dice manually.</li>
+</ul>
+<br>
+<img src="Buttons example.png" width="200" height="200">
+<br>
+*Figure 4. An example of the buttons i created to manually roll each dice.*
+<h3 id="did-you-have-any-technical-difficulties-if-so-what-were-they-and-did-you-manage-to-overcome-them">Did you have any technical difficulties? If so, what were they and did you manage to overcome them?</h3>
+<ul>
+<li>Within the project I had one difficulty with a changing the text one the buttons. This is because the way you change the text had changed since i last used it. I overcame this by asking how someone else, who had did it, did it.</li>
+</ul>
+<h2 id="critical-reflection">Critical Reflection</h2>
+<h3 id="what-did-or-did-not-work-well-and-why">What did or did not work well and why?</h3>
+<ul>
+<li>Apart from the small problem with the button text, I think everything went well with this task. This would be because I have previosly done something similar to this in a personal project.</li>
+</ul>
+<h3 id="what-would-you-do-differently-next-time">What would you do differently next time?</h3>
+<ul>
+<li>Next time I would work more on the game idea before starting the task so the end script would link more to my idea for the game i want it to end up turning into.</li>
+</ul>
+<h2 id="bibliography">Bibliography</h2>
+<p>Technologies, U. (s.d.) Unity - Scripting API: Random.Range. At: https://docs.unity3d.com/ScriptReference/Random.Range.html (Accessed  04/10/2024).</p>
+
+</body>
+</html>

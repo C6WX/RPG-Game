@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Development Journal Template-BattleSystem.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="battle-system">Battle System</h1>
+<p>Fundementals of Game Development</p>
+<p>Callum Wade</p>
+<p>2404781</p>
+<h2 id="research">Research</h2>
+<h3 id="what-sources-or-references-have-you-identified-as-relevant-to-this-task">What sources or references have you identified as relevant to this task?</h3>
+<ul>
+<li>Since I was making a battle system, I researched into accessing variables from other scripts. When working on the stats of each characted, I constantly needed to access varaibles from other scripts that would need changing.</li>
+</ul>
+<h4 id="sources">Sources</h4>
+<p>I needed to access variables from a different script so that they could be changed within the script I was currently working on. I had previously accessed variables from other scripts in past projects I had done but I needed a refresher on it. This led me to read a gamedevbeginner website on accessing variables from other scripts. (French, 2020)</p>
+<p>Within the website, I found that the section of using a get component on a different object was able to help remind me of how it is done since that was the method I used to use in my other projects. I also found the section on static variables very interesting as I used to use static variables lots to allow variables to be accessed across scripts but after reading about them as it turns out that using static variables can cause problems later of when programming as only one of a variable can be a static variable. If you were to have multiple of a singe variable, you will need to change each reference of the static variable in each script till it works.</p>
+<p>I found the guide to be simple, which is good because it is easy to find what you need to find. However it is written in an unproffesional format which can make it hard for some people to follow.</p>
+<h1 id="game-source">Game Source</h1>
+<p>An example of a game that uses a battle system is Baldur's Gate 3, a RPG game developed by Larian Studios(Baldur's Gate 3 2023).</p>
+<p>Baldur's Gate 3 uses a battle system that is completely based off a roll of the dice. Within the game, a roll of a dice decided many things that happen incuding the damage that the player deals, the chance of the player's attack hitting and if the player gets a critical hit.</p>
+<p>I find the use of a dice to determine most things within the game to make the gameplay very interesting as it means that no playthrough will ever be the same unless somehow you roll the same number for every single dice roll, which is basically impossible.</p>
+<pre class="hljs"><code><div>
+## Implementation
+
+### What was the process of completing the task? What influenced your decision making?
+
+- For the first step, amending the dice class, I made the dice return an int value.
+&lt;br&gt;
+
+```csharp
+public void RollD6()
+{
+    diceSides = 6;
+    //when the player hasn't rolled, the player can click to roll 
+    if (playerRolled == false) 
+    {
+        int d6Result = Random.Range(1, 7);
+        diceResult = d6Result;
+        Debug.Log(&quot;D6 rolled a &quot; + d6Result);
+        diceRolled = true;
+        lastRoller = &quot;Player&quot;;            
+    }        
+}
+</div></code></pre>
+<p><em>Figure 1. An of how I scripted the dice roll and making it return an in value</em></p>
+<ul>
+<li>To create the pawn class, which in my game is the basic enemy, i assigned the enemy health, max damage and difficulty stats
+<br></li>
+</ul>
+<pre class="hljs"><code><div>
+ <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> enemyDiceSides;
+ <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> enemyHealth = <span class="hljs-number">5</span>;
+ <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> enemyDifficulty = <span class="hljs-number">0</span>;
+ <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> enemyMaxDamage = <span class="hljs-number">15</span>;
+ <span class="hljs-keyword">public</span> <span class="hljs-keyword">bool</span> enemyRolled = <span class="hljs-literal">false</span>;
+ <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> enemyRollResult;
+
+</div></code></pre>
+<p><em>Figure 2. The script I used to assign the enemies' stats.</em></p>
+<ul>
+<li>To add a battle system and work out health after attacking, I made an equation that worked out damage based on the dice roll, then I made it so that after the player rolled the dice, the result of the roll would go through the equation, then the result would be subtracted off the enemies health. I also made this work for the enemy so that when the enemy rolls, the same thing happens but the damage is subtracted from the player's health.
+<br></li>
+</ul>
+<pre class="hljs"><code><div>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">PlayerDamageCalculation</span>(<span class="hljs-params"></span>)</span>
+{
+    <span class="hljs-keyword">if</span> (diceRolled == <span class="hljs-literal">true</span>)
+    {
+        <span class="hljs-comment">//works out the damage based on the dice result and the amount of sides the dice has and the max damage to make the damage equal no matter the dice rolled</span>
+        damage = ((<span class="hljs-keyword">double</span>)diceResult / diceSides) * maxDamage;
+        Debug.Log(<span class="hljs-string">"Damage = "</span> + damage);
+        damageCalculated = <span class="hljs-literal">true</span>;
+        diceRolled = <span class="hljs-literal">false</span>;
+    }
+}
+
+</div></code></pre>
+<p><em>Figure 3. The script that works out the damage based on the dice roll for the player</em></p>
+<pre class="hljs"><code><div>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">HealthCalculation</span>(<span class="hljs-params"></span>)</span>
+{
+    <span class="hljs-comment">//After the enemy has rolled, the player's health is reduced based on the enemie's damage</span>
+    <span class="hljs-keyword">if</span> (diceScript.lastRoller == <span class="hljs-string">"Enemy"</span>)
+    {
+        <span class="hljs-keyword">if</span> (diceScript.damageCalculated == <span class="hljs-literal">true</span>)
+        {
+            playerHealth = playerHealth - diceScript.enemyDamage;
+            Debug.Log(<span class="hljs-string">"Player Health = "</span> + playerHealth);
+            diceScript.damageCalculated = <span class="hljs-literal">false</span>;
+            diceScript.lastRoller = <span class="hljs-literal">null</span>;
+        }
+
+    }
+}
+
+</div></code></pre>
+<p><em>Figure 4. The script that works out the enemies' health after calculating the damage that they will take</em></p>
+<h3 id="what-creative-or-technical-approaches-did-you-use-or-try-and-how-did-this-contribute-to-the-outcome">What creative or technical approaches did you use or try, and how did this contribute to the outcome?</h3>
+<ul>
+<li>Instead of just having whatever the dice rolled be the damage, I used an equation that determined the damage based on the amount of sides on the dice, the result of the roll and the max damage that each roller can deal in one role. This adds some balance to the game and also allows for a max damage stat for both the player and the enemy that can both increase and decrease with a leveling system.</li>
+</ul>
+<h3 id="did-you-have-any-technical-difficulties-if-so-what-were-they-and-did-you-manage-to-overcome-them">Did you have any technical difficulties? If so, what were they and did you manage to overcome them?</h3>
+<ul>
+<li>A technical difficulty I had when completing this task was from the amount of variables that needed to be accessed from other scripts. This caused quite a bit of confusion and slowing of progress as I had to spend a lot of time looking back on other scripts and changing variable names and types so that they will work in the other scripts too.</li>
+</ul>
+<h2 id="critical-reflection">Critical Reflection</h2>
+<h3 id="what-did-or-did-not-work-well-and-why">What did or did not work well and why?</h3>
+<ul>
+<li>What went well was that after all the messing about with accessing variables from other scripts and renaming variables, the script worked well and as intended.</li>
+<li>What didn't go well was that due to me using more complex solutions to problems while working, the scripts didn't turn out as tidy as they could have.</li>
+</ul>
+<h3 id="what-would-you-do-differently-next-time">What would you do differently next time?</h3>
+<ul>
+<li>I would spend more time planning, if i was to do this again, so that my code would be simpler and tidier.</li>
+</ul>
+<h2 id="bibliography">Bibliography</h2>
+<p>French, J. (2020) How to get a variable from another script in Unity (the right way). At: https://gamedevbeginner.com/how-to-get-a-variable-from-another-script-in-unity-the-right-way/ (Accessed  11/10/2024).
+<br></p>
+
+</body>
+</html>
